@@ -2,9 +2,22 @@
   &__results {
     display: grid;
     gap: 24px;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    .item-card {
-      max-width: 180px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .search-results {
+    &__results {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .search-results {
+    &__results {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }

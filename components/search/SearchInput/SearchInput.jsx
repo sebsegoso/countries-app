@@ -1,22 +1,21 @@
 "use client";
 
-import CustomButton from "@/components/buttons/CustomButton";
 import "./SearchInput.scss";
 import InputText from "../../inputs/InputText/InputText";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useDebounce from "@/hooks/useDebounce";
 const SearchInput = ({ onSearch = () => {} }) => {
   const [search, setSearch] = useState("");
+  const debouncedSearch = useDebounce(search, 800);
 
-  const submitSearch = (e) => {
-    e.preventDefault();
-
-    if (!search?.trim()) return;
-
-    onSearch(search);
-  };
+  useEffect(() => {
+    if (!search || !debouncedSearch) return;
+    onSearch(debouncedSearch);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debouncedSearch, onSearch]);
 
   return (
-    <form className="search-input" id="SearchCountry" onSubmit={submitSearch}>
+    <form className="search-input" id="SearchCountry">
       <InputText
         className="search-input__input"
         type="search"
@@ -25,19 +24,13 @@ const SearchInput = ({ onSearch = () => {} }) => {
         placeholder="Type to search by name"
         value={search}
         onChange={(e) => {
-          setSearch(e.target.value);
           if (!e?.target.value?.trim()) {
             onSearch("");
           }
+          setSearch(e.target.value);
         }}
+        autoFocus
       />
-      <CustomButton
-        className="search-input__button"
-        type="submit"
-        form="SearchCountry"
-      >
-        🔎
-      </CustomButton>
     </form>
   );
 };

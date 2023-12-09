@@ -30,7 +30,7 @@ const SearchResults = ({ searchValue }) => {
   return searchValue ? (
     <section className="search-results">
       {loading ? (
-        <div className="search-results__loading">Cargando resultados...</div>
+        <div className="search-results__loading">Loading results...</div>
       ) : results?.length ? (
         // results
         <div className="search-results__results">

@@ -6,14 +6,7 @@
 
   &__input {
     flex: 1 0 0;
-    border-radius: var(--border-radius) !important;
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-  }
-  &__button {
-    border-top-left-radius: 0 !important;
-    // position: absolute;
-    border-bottom-left-radius: 0 !important;
-    right: 0;
+    border-radius: var(--border-radius);
+    padding: 24px !important;
   }
 }
