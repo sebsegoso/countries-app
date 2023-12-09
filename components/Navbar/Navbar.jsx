@@ -1,10 +1,11 @@
 import Link from "next/link";
 import React from "react";
 import "./Navbar.scss";
+import { NavLink } from "../links/NavLink";
 
 const Navbar = () => {
   const items = [
-    { label: "🔎", href: "/search" },
+    { label: "🔎 Search", href: "/search" },
     { label: "About us", href: "/about" },
     { label: "Contact us", href: "/contact" },
   ];
@@ -15,9 +16,14 @@ const Navbar = () => {
 
         <div className="navbar__items">
           {items?.map((item, i) => (
-            <Link key={i} href={item.href}>
+            <NavLink
+              key={i}
+              href={item.href}
+              activeClassName="navbar__items__item--active"
+              className="navbar__items__item"
+            >
               {item.label}
-            </Link>
+            </NavLink>
           ))}
         </div>
       </div>

@@ -8,5 +8,9 @@
     flex: 1 0 0;
     border-radius: var(--border-radius);
     padding: 24px !important;
+    &::-webkit-search-decoration:hover,
+    &::-webkit-search-cancel-button:hover {
+      cursor: pointer;
+    }
   }
 }

@@ -19,5 +19,11 @@
   }
   &__items {
     gap: 24px;
+    &__item{
+      &--active{
+        font-weight: 700;
+        color: var(--color-secondary);
+      }
+    }
   }
 }

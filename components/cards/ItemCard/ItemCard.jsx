@@ -7,7 +7,6 @@ const ItemCard = ({ item }) => {
     <Link
       href={{
         pathname: `/countries/${item.cca2}`,
-        query: { from: "/" },
       }}
       className="item-card"
     >
