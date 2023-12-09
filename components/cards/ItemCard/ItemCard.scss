@@ -1,0 +1,31 @@
+.item-card {
+  filter: drop-shadow(var(--main-shadow));
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  padding: calc(var(--border-radius) / 2);
+  grid-column: 1 span;
+  transition: all 0.3s ease;
+  position: relative;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__image {
+    width: 100%;
+    min-height: 150px;
+    object-fit: cover;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+  &__name {
+    width: fit-content;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    border-radius: 0 var(--border-radius) 0 var(--border-radius);
+    filter: drop-shadow(var(--shadow-up));
+    padding: var(--border-radius);
+  }
+}

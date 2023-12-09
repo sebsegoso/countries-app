@@ -1,0 +1,22 @@
+.navbar {
+  background-color: rgb(var(--background-start-rgb));
+  box-shadow: var(--main-shadow);
+  height: var(--navbar-height);
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &,
+  &__wrapper,
+  &__items {
+    display: flex;
+    align-items: center;
+  }
+  &__wrapper {
+    justify-content: space-between;
+  }
+  &__items {
+    gap: 24px;
+  }
+}

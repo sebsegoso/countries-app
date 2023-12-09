@@ -1,0 +1,9 @@
+.home {
+  padding-top: calc(var(--navbar-height) + 24px);
+  &__items-container {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+ 
+}
