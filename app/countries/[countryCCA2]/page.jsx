@@ -2,7 +2,7 @@ import { getCountries } from "@/services/countries";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import "./CountryDetail.scss";
+import "./countryDetail.scss";
 
 // fetch
 const getData = async (CCA2) => {
