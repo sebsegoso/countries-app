@@ -1,0 +1,19 @@
+.search-input {
+  // flex: 1 0 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+
+  &__input {
+    flex: 1 0 0;
+    border-radius: var(--border-radius) !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  &__button {
+    border-top-left-radius: 0 !important;
+    // position: absolute;
+    border-bottom-left-radius: 0 !important;
+    right: 0;
+  }
+}

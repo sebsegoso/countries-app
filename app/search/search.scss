@@ -1,0 +1,12 @@
+.search-page {
+  padding: calc(var(--navbar-height) + 24px) 0 48px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  &__wrapper {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}

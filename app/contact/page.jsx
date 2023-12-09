@@ -1,7 +1,9 @@
 import ContactForm from "@/components/forms/ContactForm/ContactForm";
 import "./contact.scss";
-import { Suspense } from "react";
 
+export const metadata = {
+  title: "Contact us",
+};
 const ContactUsPage = () => {
   return (
     <main className="contact-page">

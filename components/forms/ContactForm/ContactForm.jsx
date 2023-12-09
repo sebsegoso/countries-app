@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import "./ContactForm.scss";
-import InputText from "@/components/inputs/InputText";
+import InputText from "@/components/inputs/InputText/InputText";
 import CustomButton from "@/components/buttons/CustomButton";
 import PropTypes from "prop-types";
 import { validateRule } from "@/utils/formValidation";
@@ -128,7 +128,7 @@ const ContactForm = ({
               {input.label} {input?.required ? "*" : ""}
             </label>
             <InputText
-              input={input}
+              textarea={input?.textarea}
               className={`contact-form__input-input`}
               type={input.type || "text"}
               id={input.key}

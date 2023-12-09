@@ -1,9 +1,23 @@
-import React from 'react'
+"use client";
+import SearchResults from "@/components/search/SearchResults/SearchResults";
+import "./search.scss";
+import SearchInput from "@/components/search/SearchInput/SearchInput";
+import { useState } from "react";
 
 const SearchPage = () => {
-  return (
-    <div>SearchPage</div>
-  )
-}
+  const [searchValue, setSearchValue] = useState("");
+  const searchResults = (inputValue) => {
+    setSearchValue(inputValue);
+  };
 
-export default SearchPage
+  return (
+    <main className="search-page ">
+      <div className="search-page__wrapper wrapper">
+        <SearchInput onSearch={searchResults} />
+        <SearchResults searchValue={searchValue} />
+      </div>
+    </main>
+  );
+};
+
+export default SearchPage;

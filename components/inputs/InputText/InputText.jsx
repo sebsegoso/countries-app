@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import "./InputText.scss";
 
-const InputText = ({ input, ...inputProps }) => {
-  if (input?.textarea) {
+const InputText = ({ textarea = false, ...inputProps }) => {
+  if (textarea) {
     return (
       <textarea
         {...inputProps}
@@ -19,7 +19,7 @@ const InputText = ({ input, ...inputProps }) => {
 };
 
 InputText.propTypes = {
-  input: PropTypes.object.isRequired,
+  textarea: PropTypes.bool,
 };
 
 export default InputText;

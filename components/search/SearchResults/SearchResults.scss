@@ -1,0 +1,10 @@
+.search-results {
+  &__results {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    .item-card {
+      max-width: 180px;
+    }
+  }
+}

@@ -2,16 +2,16 @@
   padding: 8px 12px;
   border-radius: var(--border-radius);
   outline: none;
-  border: 1px solid var(--color-neutral-border);
+  border: 1px solid var(--color-primary);
   box-shadow: var(--main-shadow);
   transition: all 0.2s ease;
   background-color: var(--color-primary);
   color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 1pxs;
-  &:disabled{
+  &:disabled {
     background-color: var(--color-neutral-disabled);
-    opacity: .5;
+    opacity: 0.5;
   }
   &:not(:disabled) {
     &:hover {
