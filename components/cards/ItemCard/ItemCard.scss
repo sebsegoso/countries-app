@@ -1,5 +1,5 @@
 .item-card {
-  filter: drop-shadow(var(--main-shadow));
+  box-shadow: var(--main-shadow);
   background-color: #fff;
   border-radius: var(--border-radius);
   padding: calc(var(--border-radius) / 2);
@@ -27,5 +27,9 @@
     border-radius: 0 var(--border-radius) 0 var(--border-radius);
     filter: drop-shadow(var(--shadow-up));
     padding: var(--border-radius);
+  }
+  &:hover {
+    box-shadow: var(--main-shadow-hover);
+    scale: 1.05;
   }
 }

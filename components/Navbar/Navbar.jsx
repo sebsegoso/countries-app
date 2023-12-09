@@ -4,8 +4,8 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const items = [
-    { label: "About us", href: "about" },
-    { label: "Contact us", href: "contact" },
+    { label: "About us", href: "/about" },
+    { label: "Contact us", href: "/contact" },
   ];
   return (
     <nav className={"navbar"}>

@@ -2,7 +2,7 @@ import { getCountries } from "@/services/countries";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import React from "react";
+import "./CountryDetail.scss";
 
 // fetch
 const getData = async (CCA2) => {
@@ -30,7 +30,7 @@ const CountryDetail = async ({ params: { countryCCA2, ...rest } }) => {
   const country = await getData(countryCCA2);
 
   return (
-    <div className="wrapper">
+    <div className="wrapper country-detail">
       <h1>
         {country?.flag} {country?.name?.common}{" "}
         {country?.name?.common != country?.name?.official ? (

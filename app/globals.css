@@ -1,7 +1,10 @@
 @import "../styles/index.css";
 
 :root {
-  --max-width: 1100px;
+  /* breakpoints */
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  /*  */
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -11,31 +14,6 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
@@ -43,6 +21,7 @@
 
   /* shadow */
   --main-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.1);
+  --main-shadow-hover: 0px 6px 15px 0px rgba(0, 0, 0, 0.3);
   --shadow-up: 0px -5px 13px 0px rgba(0, 0, 0, 0.1);
 
   /*  navbar*/
@@ -65,12 +44,6 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 a {

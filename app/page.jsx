@@ -14,8 +14,9 @@ export default async function Home() {
   const shuffleCountries = shuffleArray(countries)
   return (
     <main className="home">
-      <section className="wrapper">
-        <h1>Countries</h1>
+      <section className="home__wrapper wrapper">
+        <h1>CountriesApp</h1>
+        
         <div className="home__items-container">
           {shuffleCountries.map((country) => (
             <ItemCard key={country.cca2} item={country} />
