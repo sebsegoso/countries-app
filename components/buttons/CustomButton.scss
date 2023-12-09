@@ -1,0 +1,29 @@
+.custom-button {
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  outline: none;
+  border: 1px solid var(--color-neutral-border);
+  box-shadow: var(--main-shadow);
+  transition: all 0.2s ease;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 1pxs;
+  &:disabled{
+    background-color: var(--color-neutral-disabled);
+    opacity: .5;
+  }
+  &:not(:disabled) {
+    &:hover {
+      cursor: pointer;
+      scale: 1.02;
+    }
+    &:active {
+      scale: 0.99;
+    }
+    &:hover,
+    &:active {
+      opacity: 0.9;
+    }
+  }
+}

@@ -4,20 +4,10 @@
   /* breakpoints */
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
-  /*  */
+  /* radius */
+  --border-radius-soft: 4px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  --border-radius-hard: 24px;
 
   /* shadow */
   --main-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.1);
@@ -28,6 +18,14 @@
   --navbar-height: 75px;
 
   /* colors */
+  --color-primary: #f00;
+  --color-secondary: #00f;
+  --color-highlight: #0f0;
+  --color-neutral-100: #000;
+  --color-neutral-border: #ccc;
+  --color-neutral-disabled: #555;
+  --color-neutral-0: rgb(250, 250, 250);
+  --color-white: #fff;
 }
 
 * {
@@ -43,7 +41,8 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--color-neutral-100);
+  background-color: var(--color-neutral-0);
 }
 
 a {

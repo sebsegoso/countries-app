@@ -14,9 +14,9 @@ const ItemCard = ({ item }) => {
       <article className="item-card__container">
         <Image
           src={item.flags?.svg}
-          width={150}
-          height={100}
-          alt={item.flags?.alt}
+          width={120}
+          height={80}
+          alt={item.flags?.alt || item.name?.common}
           className="item-card__image"
         />
         <h3 className="item-card__name">{item.name?.common}</h3>

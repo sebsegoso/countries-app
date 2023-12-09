@@ -1,11 +1,12 @@
 .item-card {
   box-shadow: var(--main-shadow);
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: var(--border-radius);
-  padding: calc(var(--border-radius) / 2);
+  padding: 0;
   grid-column: 1 span;
   transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
   &__container {
     display: flex;
     flex-direction: column;
@@ -13,7 +14,6 @@
   }
   &__image {
     width: 100%;
-    min-height: 150px;
     object-fit: cover;
     height: auto;
     aspect-ratio: 3 / 2;
@@ -21,15 +21,34 @@
   &__name {
     width: fit-content;
     position: absolute;
-    bottom: 0;
     left: 0;
-    background-color: #fff;
+    bottom: 0;
+    font-size: 0.8rem;
+    background-color: var(--color-white);
     border-radius: 0 var(--border-radius) 0 var(--border-radius);
-    filter: drop-shadow(var(--shadow-up));
+    box-shadow: var(--shadow-up);
     padding: var(--border-radius);
+
+    transform: none;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.3s ease-in-out;
   }
-  &:hover {
-    box-shadow: var(--main-shadow-hover);
-    scale: 1.05;
+}
+
+@media (min-width: 1080px) {
+  .item-card {
+    &__name {
+      top: 100%;
+      bottom: initial;
+    }
+    &:hover {
+      box-shadow: var(--main-shadow-hover);
+      scale: 1.05;
+
+      .item-card__name {
+        transform: translate(0, -100%);
+      }
+    }
   }
 }

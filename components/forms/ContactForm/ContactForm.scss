@@ -1,0 +1,37 @@
+.contact-form {
+  display: grid;
+  gap: 24px;
+  &__input {
+    &-control {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    &-label {
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+    &-input {
+      width: 100%;
+    }
+  }
+  &-success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-form {
+    grid-template-columns: 1fr 1fr;
+    &__input-control--full,
+    .custom-button {
+      grid-column: 2 span;
+    }
+  }
+}
