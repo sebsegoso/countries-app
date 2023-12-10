@@ -1,7 +1,10 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
-import { NavLink } from "../links/NavLink";
+import { NavLink } from "../../links/NavLink";
+import NavbarMenu from "../NavbarMenu/NavbarMenu";
+import Image from "next/image";
 
 const Navbar = () => {
   const items = [
@@ -9,10 +12,12 @@ const Navbar = () => {
     { label: "About us", href: "/about" },
     { label: "Contact us", href: "/contact" },
   ];
+
+  const [openMenu, setOpenMenu] = useState(false);
   return (
     <nav className={"navbar"}>
       <div className={"navbar__wrapper wrapper"}>
-        <Link href={"/"}>🌎WorldApp</Link>
+        <Link href={"/"}>🌎CountriesApp</Link>
 
         <div className="navbar__items">
           {items?.map((item, i) => (
@@ -26,7 +31,20 @@ const Navbar = () => {
             </NavLink>
           ))}
         </div>
+        <Image
+          src="/burger.svg"
+          width={24}
+          height={24}
+          alt="Burger menu"
+          className="navbar__burger"
+          onClick={() => setOpenMenu(true)}
+        />
       </div>
+      <NavbarMenu
+        open={openMenu}
+        items={items}
+        onClose={() => setOpenMenu(false)}
+      />
     </nav>
   );
 };

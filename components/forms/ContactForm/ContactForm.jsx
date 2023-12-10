@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import { validateRule } from "@/utils/formValidation";
 import toast from "react-hot-toast";
 import Link from "next/link";
+import Image from "next/image";
 
 const inputs = [
   {
@@ -101,6 +102,7 @@ const ContactForm = ({
     <>
       {successHeader}
       <div className="contact-form-success">
+        <Image src={"/check.svg"} alt="check" width={64} height={64} />
         <h1>Your form has been successfully submitted.</h1>
 
         <h2>

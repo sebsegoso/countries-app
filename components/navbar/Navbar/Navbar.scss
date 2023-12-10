@@ -19,11 +19,23 @@
   }
   &__items {
     gap: 24px;
-    &__item{
-      &--active{
+    display: none;
+    &__item {
+      &--active {
         font-weight: 700;
         color: var(--color-secondary);
       }
+    }
+  }
+}
+@media (min-width: 1080px) {
+  .navbar {
+    &__items {
+      display: flex;
+    }
+    &__burger {
+      display: none;
+      cursor: pointer;
     }
   }
 }
