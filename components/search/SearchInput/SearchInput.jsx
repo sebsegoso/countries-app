@@ -15,7 +15,7 @@ const SearchInput = ({ onSearch = () => {} }) => {
   }, [debouncedSearch, onSearch]);
 
   return (
-    <form className="search-input" id="SearchCountry">
+    <form className="search-input" id="SearchCountry" onSubmit={e => e.preventDefault()}>
       <InputText
         className="search-input__input"
         type="search"
