@@ -12,6 +12,10 @@ const nextConfig = {
             },
         ],
     },
+    sassOptions: {
+        includePaths: ['./styles'],
+        prependData: `@import "styles/utils/variables.scss";`
+    }
 }
 
 module.exports = nextConfig

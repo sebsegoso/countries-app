@@ -6,7 +6,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md) {
   .search-results {
     &__results {
       grid-template-columns: repeat(2, 1fr);
@@ -14,7 +14,7 @@
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: $breakpoint-lg) {
   .search-results {
     &__results {
       grid-template-columns: repeat(4, 1fr);

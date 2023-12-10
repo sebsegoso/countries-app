@@ -35,7 +35,7 @@
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: $breakpoint-lg) {
   .item-card {
     &__name {
       top: 100%;

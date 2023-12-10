@@ -26,7 +26,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-md) {
   .contact-form {
     grid-template-columns: 1fr 1fr;
     &__input-control--full,

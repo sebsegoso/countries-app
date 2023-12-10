@@ -28,7 +28,7 @@
     }
   }
 }
-@media (min-width: 1080px) {
+@media (min-width: $breakpoint-lg) {
   .navbar {
     &__items {
       display: flex;

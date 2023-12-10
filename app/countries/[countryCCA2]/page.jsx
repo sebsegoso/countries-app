@@ -1,6 +1,5 @@
 import { getCountries } from "@/services/countries";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import "./countryDetail.scss";
 
@@ -66,14 +65,14 @@ const CountryDetail = async ({ params: { countryCCA2, ...rest } }) => {
         ) : null}
 
         <table className="country-detail__table">
-         <tbody>
+          <tbody>
             <tr>
               <th>independent:</th>
               <td> {country?.independent ? "✓" : "❌"}</td>
             </tr>
             <tr>
-              <th>region:</th>
-              <td> {country?.region}</td>
+              <th>continent:</th>
+              <td> {country?.continents}</td>
             </tr>
             <tr>
               <th>region:</th>
@@ -87,17 +86,20 @@ const CountryDetail = async ({ params: { countryCCA2, ...rest } }) => {
               <th>capital:</th>
               <td> {country?.capital}</td>
             </tr>
-  
+
             <tr>
               <th>population:</th>
-              <td> {country?.population?.toLocaleString("es-ES")}</td>
+              <td> {country?.population?.toLocaleString("en-US")}</td>
             </tr>
-  
+
             <tr>
               <th>area:</th>
-              <td> {country?.area?.toLocaleString("es-ES")}</td>
+              <td>
+                {" "}
+                {country?.area?.toLocaleString("en-US")} m<sup>2</sup>
+              </td>
             </tr>
-         </tbody>
+          </tbody>
         </table>
 
         <a

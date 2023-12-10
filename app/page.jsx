@@ -2,9 +2,7 @@ import { getCountries } from "@/services/countries";
 import ItemCard from "@/components/cards/ItemCard/ItemCard";
 import { shuffleArray } from "@/utils/arrayUtils";
 import "./home.scss";
-import { useMemo } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import HomeHeader from "@/components/home/HomeHeader";
 
 const getData = async () =>
   await getCountries({
@@ -15,36 +13,11 @@ const getData = async () =>
 export default async function Home() {
   const countries = await getData();
   const shuffleCountries = shuffleArray(countries);
-  const randomItem =
-    shuffleCountries[Math.floor(Math.random() * shuffleCountries.length)];
 
   return (
     <main className="home">
       <section className="home__wrapper">
-        {randomItem ? (
-          <header className="home__header">
-            <div className="home__header__wrapper wrapper">
-              <h1 className="">CountriesApp</h1>
-              <h3>
-                Did you know... {randomItem?.capital} is the capital of{" "}
-                <Link
-                  href={{
-                    pathname: `/countries/${randomItem?.cca2}`,
-                  }}
-                >
-                  {randomItem?.name?.common}
-                </Link>{" "}
-                <Image
-                  src={randomItem?.flags?.svg}
-                  width={18}
-                  height={12}
-                  alt={randomItem?.flags?.alt || randomItem?.name?.common}
-                />
-                ?
-              </h3>
-            </div>
-          </header>
-        ) : null}
+        <HomeHeader countries={shuffleCountries} />
 
         <div className="home__items-container wrapper">
           {shuffleCountries.map((country) => (

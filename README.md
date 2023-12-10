@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CountriesApp
+
+## Introduction
+
+Welcome to the documentation of CountriesApp, a Front-end application built with Next.js 13.5.6 that allows exploring information about countries using the [RestCountries REST API](https://restcountries.com/).
+
+### Check out our [DEMO](https://countries-app-lime.vercel.app/) for more details.
+
+## Dependencies
+
+```
+next: 13.5.6
+react: ^18
+react-dom: ^18
+react-hot-toast: ^2.4.1
+sass: ^1.69.5
+```
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+npm install
+# or
+yarn
+```
+
+Then, run the development server:
+
+```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
 
-## Learn More
+|-- /app
+|    -- layout.js
+|    -- page.jsx
+|    -- globals.scss
+|    -- /[page]
+|         -- page.jsx
+|         -- [pageStyle].scss
+|    -- ...
+|-- /components
+|    -- /[componentCategory]
+|         -- [Component].jsx
+|         -- [ComponentStyle].scss
+|    -- ...
+|-- /hooks
+|-- /styles
+|-- /utils
+|-- next.config.js
+|-- package.json
+|-- ...
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Home (/):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The home page displays a list of all countries and their flags. Clicking on a country redirects to the details page.
+
+### Details (/countries/[countryCCA2]):
+
+The details view shows specific information about a country, identified by its unique CCA2 code.
+
+### Search (/search):
+
+The search page allows queries using the useDebounce hook to optimize API requests.
+
+### About Us (/about):
+
+This page provides additional information about the project and the team behind its development.
+
+### Contact (/contact):
+
+The contact page has a simple form requesting name, email, and message.
 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out our [DEMO](https://countries-app-lime.vercel.app/) for more details.

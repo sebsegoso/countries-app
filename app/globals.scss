@@ -1,9 +1,6 @@
-@import "../styles/index.css";
+@import "../styles/index.scss";
 
 :root {
-  /* breakpoints */
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
   /* radius */
   --border-radius-soft: 4px;
   --border-radius: 12px;
