@@ -9,6 +9,7 @@ Welcome to the documentation of CountriesApp, a Front-end application built with
 ## Dependencies
 
 ```
+framer-motion: "^10.16.16",
 next: 13.5.6
 react: ^18
 react-dom: ^18
