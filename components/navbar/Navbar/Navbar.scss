@@ -7,6 +7,10 @@
   top: 0;
   width: 100%;
   z-index: 8;
+  transition: top 1s ease-in-out;
+  &--open {
+    top: -100%;
+  }
   &,
   &__wrapper,
   &__items {
@@ -27,6 +31,9 @@
       }
     }
   }
+  &__burger {
+    cursor: pointer;
+  }
 }
 @media (min-width: $breakpoint-lg) {
   .navbar {
@@ -35,7 +42,6 @@
     }
     &__burger {
       display: none;
-      cursor: pointer;
     }
   }
 }

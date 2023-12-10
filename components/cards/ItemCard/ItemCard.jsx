@@ -25,6 +25,7 @@ const ItemCard = ({ item }) => {
 };
 
 import React from "react";
+import { motion } from "framer-motion";
 
 ItemCard.propTypes = {
   item: PropTypes.object.isRequired,

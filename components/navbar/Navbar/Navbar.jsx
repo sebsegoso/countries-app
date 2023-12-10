@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <nav className={"navbar"}>
+    <nav className={`navbar ${openMenu ? "navbar--open" : ""}`}>
       <div className={"navbar__wrapper wrapper"}>
         <Link href={"/"}>🌎CountriesApp</Link>
 
