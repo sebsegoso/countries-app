@@ -1,11 +1,11 @@
-export const validateRule = (ruleName, value) => {
+export const validateRule = (ruleName, value, name) => {
     switch (ruleName) {
         case "not-empty":
-            return String(value).trim() !== "";
+            return {valid: String(value).trim() !== "", msg: `Add your ${name} `};
         case "email-address":
             const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            return emailRegex.test(value);
+            return {valid: emailRegex.test(value), msg: `The ${name} format is not valid`};
         default:
-            return false;
+            return {valid: true, msg: ""};
     }
 };

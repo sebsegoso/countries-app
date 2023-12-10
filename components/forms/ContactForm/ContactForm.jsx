@@ -64,15 +64,20 @@ const ContactForm = ({
     };
 
     for (let input of inputs) {
-      const isValid = validateRule(input.rule, form[input.key]);
+      const { valid, msg } = validateRule(
+        input.rule,
+        form[input.key],
+        input.key
+      );
       fieldsResults.fields.push({
         key: input.key,
-        isValid: isValid,
+        isValid: valid,
       });
-      if (isValid) {
+      if (valid) {
         fieldsResults.valid += 1;
       } else {
         fieldsResults.invalid += 1;
+        msg && toast.error(msg);
       }
     }
 
@@ -94,8 +99,6 @@ const ContactForm = ({
         }));
         toast.success("Form submitted");
       }, 2000);
-    } else {
-      toast.error("Errors");
     }
   };
   return formStatus.success ? (
