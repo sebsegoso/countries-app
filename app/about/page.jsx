@@ -3,6 +3,10 @@ import "./about.scss";
 import Link from "next/link";
 
 const APP_NAME = "CountriesApp";
+export const metadata = {
+  title: "About us",
+  description: `We've crafted a unique experience for you to explore and learn more about countries across our planet. Our app combines the thrill of discovery with the fun of games, offering a delightful journey to uncover the diversity of nations.`,
+};
 const AboutPage = () => {
   return (
     <main className="about-page">
